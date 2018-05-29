@@ -17,14 +17,14 @@ $(call inherit-product, device/xiaomi/kenzo/full_kenzo.mk)
 
 
 # Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/liquid/config/common_full_phone.mk)
 
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := kenzo
-PRODUCT_NAME := aosp_kenzo
+PRODUCT_NAME := liquid_kenzo
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 3
 TARGET_VENDOR := Xiaomi
@@ -34,6 +34,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Use the latest approved GMS identifiers unless running a signed build
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="kenzo-user 6.0.1 MMB29M V8.2.1.0.MHOCNDL release-keys"
+    DEVICE_MAINTAINERS="Sagar Rokade"
 
 BUILD_FINGERPRINT=Xiaomi/kenzo/kenzo:6.0.1/MMB29M/V8.2.1.0.MHOCNDL:user/release-keys
 
